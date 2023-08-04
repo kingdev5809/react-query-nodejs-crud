@@ -4,7 +4,6 @@ module.exports.createPosts = async (req, res, next) => {
   console.log(req);
   try {
     const { image, title, text } = req.body;
-    console.log(req.body);
     const post = await Post.create({
       image,
       title,
@@ -32,12 +31,11 @@ module.exports.getPosts = async (req, res, next) => {
 module.exports.UpdatePost = async (req, res) => {
   try {
     const { images, title, text, _id } = req.body;
-    console.log( _id);
+    console.log(_id);
     const posts = await Post.findByIdAndUpdate(
       { _id: req.params.id },
       { $set: { images, title, text } }
     );
-    console.log(posts);
     return res.json("Post updated successfully");
   } catch (err) {
     return res.json(err);

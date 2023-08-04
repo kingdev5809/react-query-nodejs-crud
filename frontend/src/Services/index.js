@@ -11,7 +11,6 @@ export const useGetPosts = () => {
     queryFn: ({ signal }) => getAllPosts(signal),
     select: (res) => res,
   });
-  console.log(posts);
   return { posts, isLoading, isError, error };
 };
 
@@ -26,7 +25,6 @@ export const useAddPost = () => {
   } = useMutation((data) => AddPost(data), {
     onSuccess: () => {
       queryClient.invalidateQueries(["post"]);
-      
     },
   });
 

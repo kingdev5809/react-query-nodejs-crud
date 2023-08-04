@@ -11,6 +11,7 @@ function Posts() {
     text: "",
     image: "",
   });
+  const [type, setType] = useState(null);
   const [AddModalVisible, setAddModalVisible] = useState(false);
 
   return (
@@ -27,6 +28,7 @@ function Posts() {
               setAddModalVisible={setAddModalVisible}
               setData={setData}
               item={item}
+              setType={setType}
             />
           ))
           .reverse()}
@@ -36,6 +38,7 @@ function Posts() {
           setAddModalVisible={setAddModalVisible}
           setData={setData}
           data={data}
+          type={type}
         />
       )}
     </div>

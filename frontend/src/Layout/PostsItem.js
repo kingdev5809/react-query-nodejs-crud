@@ -17,10 +17,11 @@ import {
 } from "./Styles";
 import { useDeletePost } from "../Services";
 
-function PostsItem({ item, setAddModalVisible, setData }) {
+function PostsItem({ item, setAddModalVisible, setData, setType }) {
   const handleUpdate = () => {
     setData(item);
     setAddModalVisible(true);
+    setType("edit");
   };
   const { isDeleting, isSuccessDeleting, DeletePost } = useDeletePost();
   const handleDeletePost = (id) => {

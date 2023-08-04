@@ -34,6 +34,7 @@ function AddPostModal({ setAddModalVisible, data, setData, type }) {
     e.preventDefault();
     if (type === "edit") {
       UpdatePost(data);
+      console.log("edit");
       return;
     }
     CreatePost(data);
@@ -43,7 +44,7 @@ function AddPostModal({ setAddModalVisible, data, setData, type }) {
     if (isSuccessCreating || isSuccessUpdating) {
       setAddModalVisible(false);
       queryClient.refetchQueries(["post"]);
-      // window.location.reload();
+      window.location.reload();
     }
   }, [isSuccessCreating, isSuccessUpdating]);
 

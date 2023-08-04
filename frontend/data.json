@@ -1,0 +1,44 @@
+{
+  "posts": [
+    {
+      "title": "My new post",
+      "text": "This is my new post.",
+      "image": "https://picsum.photos/id/1011/800/450",
+      "id": 2
+    },
+    {
+      "title": "awdawd",
+      "text": "awdawd",
+      "image": "https://picsum.photos/id/1011/800/450",
+      "id": 3
+    },
+    {
+      "title": "Abdurashid",
+      "text": "Agzamov",
+      "image": "https://picsum.photos/id/1011/800/450",
+      "id": 4
+    },
+    {
+      "title": "awdawd",
+      "text": "awdawdawd",
+      "image": "https://picsum.photos/id/1011/800/450",
+      "id": 5
+    },
+    {
+      "title": "aaa",
+      "text": "aaaa",
+      "image": "https://picsum.photos/id/1011/800/450",
+      "id": 6
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
